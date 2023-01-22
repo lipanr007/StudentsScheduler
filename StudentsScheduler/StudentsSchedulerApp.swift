@@ -11,7 +11,6 @@ import SwiftUI
 struct StudentsSchedulerApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
         }
     }
 }

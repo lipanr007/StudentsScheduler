@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		7611806B297C412900C47B68 /* StudentsSchedulerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7611806A297C412900C47B68 /* StudentsSchedulerApp.swift */; };
-		7611806D297C412900C47B68 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7611806C297C412900C47B68 /* ContentView.swift */; };
 		7611806F297C412B00C47B68 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7611806E297C412B00C47B68 /* Assets.xcassets */; };
 		76118072297C412B00C47B68 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76118071297C412B00C47B68 /* Preview Assets.xcassets */; };
 		7611807C297C412C00C47B68 /* StudentsSchedulerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7611807B297C412C00C47B68 /* StudentsSchedulerTests.swift */; };
 		76118086297C412C00C47B68 /* StudentsSchedulerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76118085297C412C00C47B68 /* StudentsSchedulerUITests.swift */; };
 		76118088297C412C00C47B68 /* StudentsSchedulerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76118087297C412C00C47B68 /* StudentsSchedulerUITestsLaunchTests.swift */; };
+		76118098297C46C000C47B68 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76118097297C46C000C47B68 /* UserModel.swift */; };
+		7643187B297D8F4E00D91DC8 /* CourseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7643187A297D8F4E00D91DC8 /* CourseModel.swift */; };
+		7643187D297D902E00D91DC8 /* AssetsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7643187C297D902E00D91DC8 /* AssetsModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +38,6 @@
 /* Begin PBXFileReference section */
 		76118067297C412900C47B68 /* StudentsScheduler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudentsScheduler.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7611806A297C412900C47B68 /* StudentsSchedulerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentsSchedulerApp.swift; sourceTree = "<group>"; };
-		7611806C297C412900C47B68 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7611806E297C412B00C47B68 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		76118071297C412B00C47B68 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		76118077297C412C00C47B68 /* StudentsSchedulerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StudentsSchedulerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +45,9 @@
 		76118081297C412C00C47B68 /* StudentsSchedulerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StudentsSchedulerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		76118085297C412C00C47B68 /* StudentsSchedulerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentsSchedulerUITests.swift; sourceTree = "<group>"; };
 		76118087297C412C00C47B68 /* StudentsSchedulerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentsSchedulerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		76118097297C46C000C47B68 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		7643187A297D8F4E00D91DC8 /* CourseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseModel.swift; sourceTree = "<group>"; };
+		7643187C297D902E00D91DC8 /* AssetsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetsModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +98,10 @@
 		76118069297C412900C47B68 /* StudentsScheduler */ = {
 			isa = PBXGroup;
 			children = (
+				76118096297C426700C47B68 /* ViewModels */,
+				76118095297C426100C47B68 /* Views */,
+				76118094297C425800C47B68 /* Models */,
 				7611806A297C412900C47B68 /* StudentsSchedulerApp.swift */,
-				7611806C297C412900C47B68 /* ContentView.swift */,
 				7611806E297C412B00C47B68 /* Assets.xcassets */,
 				76118070297C412B00C47B68 /* Preview Content */,
 			);
@@ -125,6 +131,30 @@
 				76118087297C412C00C47B68 /* StudentsSchedulerUITestsLaunchTests.swift */,
 			);
 			path = StudentsSchedulerUITests;
+			sourceTree = "<group>";
+		};
+		76118094297C425800C47B68 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				76118097297C46C000C47B68 /* UserModel.swift */,
+				7643187A297D8F4E00D91DC8 /* CourseModel.swift */,
+				7643187C297D902E00D91DC8 /* AssetsModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		76118095297C426100C47B68 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		76118096297C426700C47B68 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,7 +287,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7611806D297C412900C47B68 /* ContentView.swift in Sources */,
+				7643187D297D902E00D91DC8 /* AssetsModel.swift in Sources */,
+				7643187B297D8F4E00D91DC8 /* CourseModel.swift in Sources */,
+				76118098297C46C000C47B68 /* UserModel.swift in Sources */,
 				7611806B297C412900C47B68 /* StudentsSchedulerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
