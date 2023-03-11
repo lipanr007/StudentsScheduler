@@ -15,7 +15,7 @@
 		76118088297C412C00C47B68 /* StudentsSchedulerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76118087297C412C00C47B68 /* StudentsSchedulerUITestsLaunchTests.swift */; };
 		76118098297C46C000C47B68 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76118097297C46C000C47B68 /* UserModel.swift */; };
 		7643187B297D8F4E00D91DC8 /* CourseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7643187A297D8F4E00D91DC8 /* CourseModel.swift */; };
-		7643187D297D902E00D91DC8 /* AssetsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7643187C297D902E00D91DC8 /* AssetsModel.swift */; };
+		7643187D297D902E00D91DC8 /* CourseAssetsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7643187C297D902E00D91DC8 /* CourseAssetsModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,7 +47,7 @@
 		76118087297C412C00C47B68 /* StudentsSchedulerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentsSchedulerUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		76118097297C46C000C47B68 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		7643187A297D8F4E00D91DC8 /* CourseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseModel.swift; sourceTree = "<group>"; };
-		7643187C297D902E00D91DC8 /* AssetsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetsModel.swift; sourceTree = "<group>"; };
+		7643187C297D902E00D91DC8 /* CourseAssetsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseAssetsModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,7 +138,7 @@
 			children = (
 				76118097297C46C000C47B68 /* UserModel.swift */,
 				7643187A297D8F4E00D91DC8 /* CourseModel.swift */,
-				7643187C297D902E00D91DC8 /* AssetsModel.swift */,
+				7643187C297D902E00D91DC8 /* CourseAssetsModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -287,7 +287,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7643187D297D902E00D91DC8 /* AssetsModel.swift in Sources */,
+				7643187D297D902E00D91DC8 /* CourseAssetsModel.swift in Sources */,
 				7643187B297D8F4E00D91DC8 /* CourseModel.swift in Sources */,
 				76118098297C46C000C47B68 /* UserModel.swift in Sources */,
 				7611806B297C412900C47B68 /* StudentsSchedulerApp.swift in Sources */,

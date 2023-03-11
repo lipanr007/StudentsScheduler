@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Assets: Codable {
+struct CourseAssets: Codable {
     var notes: [String]
     var deadlines: [Deadline]
     var grades: [Grade]
