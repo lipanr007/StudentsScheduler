@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		76014A0929BDC26400631C87 /* NotificationsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76014A0829BDC26400631C87 /* NotificationsModel.swift */; };
 		7611806B297C412900C47B68 /* StudentsSchedulerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7611806A297C412900C47B68 /* StudentsSchedulerApp.swift */; };
 		7611806F297C412B00C47B68 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7611806E297C412B00C47B68 /* Assets.xcassets */; };
 		76118072297C412B00C47B68 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76118071297C412B00C47B68 /* Preview Assets.xcassets */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		76014A0829BDC26400631C87 /* NotificationsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsModel.swift; sourceTree = "<group>"; };
 		76118067297C412900C47B68 /* StudentsScheduler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudentsScheduler.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7611806A297C412900C47B68 /* StudentsSchedulerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentsSchedulerApp.swift; sourceTree = "<group>"; };
 		7611806E297C412B00C47B68 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 				76118097297C46C000C47B68 /* UserModel.swift */,
 				7643187A297D8F4E00D91DC8 /* CourseModel.swift */,
 				7643187C297D902E00D91DC8 /* CourseAssetsModel.swift */,
+				76014A0829BDC26400631C87 /* NotificationsModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -289,6 +292,7 @@
 			files = (
 				7643187D297D902E00D91DC8 /* CourseAssetsModel.swift in Sources */,
 				7643187B297D8F4E00D91DC8 /* CourseModel.swift in Sources */,
+				76014A0929BDC26400631C87 /* NotificationsModel.swift in Sources */,
 				76118098297C46C000C47B68 /* UserModel.swift in Sources */,
 				7611806B297C412900C47B68 /* StudentsSchedulerApp.swift in Sources */,
 			);

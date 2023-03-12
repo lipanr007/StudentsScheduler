@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CourseAssets: Codable {
+struct CourseAsset: Codable {
     var notes: [Note]
     var deadlines: [Deadline]
     var homework: [Homework]
@@ -79,5 +79,13 @@ struct Grade: Codable {
     init(day: Date, mark: Double) {
         self.day = day
         self.mark = mark
+    }
+}
+
+struct CourseAssets: Codable {
+    var courseAssets: [CourseAsset]
+    
+    init(courseAssets: [CourseAsset]) {
+        self.courseAssets = courseAssets
     }
 }
