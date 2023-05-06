@@ -38,7 +38,7 @@ class Course: Identifiable, Codable {
     }
 }
 
-struct Courses: Codable {
+struct Courses: Codable{
     var courses: [Course]
     
     init(courses: [Course]) {
