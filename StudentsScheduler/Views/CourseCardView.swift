@@ -28,9 +28,9 @@ struct CourseCardView: View {
         }
         .padding(20)
         .background(
-            RoundedRectangle(cornerRadius: 10)
-                .foregroundColor(.white)
-                .shadow(color: Color.black.opacity(0.2), radius: 5, x: 0, y: 2)
+            RoundedRectangle(cornerRadius: 20)
+                .strokeBorder(Color.black, lineWidth: 2)
+                .background(RoundedRectangle(cornerRadius: 20).fill(Color.white))
                 .frame(width: 150, height: 200)
         )
     }

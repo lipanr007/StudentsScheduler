@@ -11,6 +11,9 @@ import SwiftUI
 struct StudentsSchedulerApp: App {
     var body: some Scene {
         WindowGroup {
+//            SplashView()
+            HomeView(viewModel: HomeViewModel())
+//            AddCourseView()
         }
     }
 }

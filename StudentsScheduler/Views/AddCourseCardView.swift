@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct AddCourseCardView: View {
-    @ObservedObject var viewModel: AddCourseCardViewModel
+    @StateObject var viewModel: AddCourseViewModel
     
     var body: some View {
         RoundedRectangle(cornerRadius: 20)
@@ -29,14 +29,11 @@ struct AddCourseCardView: View {
                         .padding(.top)
                 }
             )
-            .onTapGesture {
-                viewModel.addCourse()
-            }
     }
 }
 
 struct AddCourseCardView_Previews: PreviewProvider {
     static var previews: some View {
-        AddCourseCardView(viewModel: AddCourseCardViewModel())
+        AddCourseCardView(viewModel: AddCourseViewModel())
     }
 }

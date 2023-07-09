@@ -9,9 +9,12 @@ import SwiftUI
 
 class HomeViewModel: ObservableObject {
     @Published var courses: [Course] = []
+    private let userDataManager = UserDataManager.shared
     
     func loadData() {
-        // Load user's courses and schedule from the backend API
-        // and assign the results to the courses and schedule properties.
+        if let currentUser = userDataManager.getCurrentUser() {
+            courses = currentUser.courses
+        }
     }
 }
+

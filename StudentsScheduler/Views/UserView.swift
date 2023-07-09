@@ -8,50 +8,36 @@
 import SwiftUI
 
 struct UserView: View {
-    @ObservedObject var viewModel: UserViewModel
+    @StateObject var viewModel: UserViewModel
     
     var body: some View {
-        VStack {
-            HStack {
-                Spacer()
-                Text("User Profile")
-                    .font(.title)
-                    .fontWeight(.bold)
-                Spacer()
-                Button(action: viewModel.signOut) {
-                    Text("Sign Out")
-                }
-            }
-            .padding()
-            
-            if let user = viewModel.user {
-                VStack(spacing: 20) {
-                    Image(systemName: "person.circle.fill")
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
-                        .frame(width: 120, height: 120)
-                        .clipShape(Circle())
-                        .overlay(Circle().stroke(Color.white, lineWidth: 4))
-                        .shadow(radius: 7)
-                    
-                    Text(user.username)
-                        .font(.title)
-                        .fontWeight(.bold)
-                    
-                    Button(action: viewModel.updateProfile) {
-                        Text("Update Profile")
-                    }
-                    
-                    Button(action: viewModel.changePassword) {
-                        Text("Change Password")
+        NavigationView {
+            ZStack {
+                if viewModel.user != nil {
+                    UserProfileView(viewModel: viewModel)
+                } else {
+                    VStack {
+                        NavigationLink(destination: LoginView(viewModel: viewModel)) { // Pass the viewModel
+                            Text("Login")
+                        }
+                        .padding(40)
+                        
+                        NavigationLink(destination: SignInView(viewModel: viewModel)) { // Pass the viewModel
+                            Text("Sign In")
+                        }
                     }
                 }
-            } else {
-                Text("Loading...")
             }
-            
-            Spacer()
+            .navigationBarHidden(true)
         }
-        .navigationBarHidden(true)
+    }
+}
+
+
+
+
+struct UserView_Previews: PreviewProvider {
+    static var previews: some View {
+        UserView(viewModel: UserViewModel())
     }
 }

@@ -16,7 +16,7 @@ class Course: Identifiable, Codable {
     var type: CourseType
     var room: String
     var building: String
-    var assetsList: [CourseAssets]
+    var assetsList: [CourseAsset]
     
     enum WeekDay: String, CaseIterable, Codable {
         case monday, tuesday, wednesday, thursday, friday, saturday, sunday
@@ -26,7 +26,7 @@ class Course: Identifiable, Codable {
         case course, seminar, laboratory
     }
     
-    init(name: String, day: WeekDay, startTime: Date, duration: Int, type: CourseType, room: String, building: String, assetsList: [CourseAssets]) {
+    init(name: String, day: WeekDay, startTime: Date, duration: Int, type: CourseType, room: String, building: String, assetsList: [CourseAsset]) {
         self.name = name
         self.day = day
         self.startTime = startTime

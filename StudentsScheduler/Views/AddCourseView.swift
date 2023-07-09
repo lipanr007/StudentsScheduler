@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct AddCourseView: View {
-    @StateObject var viewModel = AddCourseViewModel()
+    @StateObject var viewModel: AddCourseViewModel
+    @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
         NavigationView {
@@ -38,12 +39,12 @@ struct AddCourseView: View {
                     TextField("Building", text: $viewModel.building)
                 }
                 
-                Section(header: Text("Assets")) {
-                    // Add assets here
-                }
-                
                 Section {
-                    Button(action: viewModel.addCourse) {
+                    Button(action: {
+                        viewModel.addCourse()
+                        presentationMode.wrappedValue.dismiss()
+                        
+                    }) {
                         Text("Add Course")
                     }
                 }
@@ -56,6 +57,6 @@ struct AddCourseView: View {
 
 struct AddCourseView_Previews: PreviewProvider {
     static var previews: some View {
-        AddCourseView()
+        AddCourseView(viewModel: AddCourseViewModel())
     }
 }

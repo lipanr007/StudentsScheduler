@@ -26,6 +26,11 @@
 		764D476529E5D82000466E57 /* AddCourseCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764D476429E5D82000466E57 /* AddCourseCardViewModel.swift */; };
 		764D476729E5E5DE00466E57 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764D476629E5E5DE00466E57 /* CalendarView.swift */; };
 		764D476929E5E5F800466E57 /* CalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764D476829E5E5F800466E57 /* CalendarViewModel.swift */; };
+		7661F24B2A5063140090B46C /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7661F24A2A5063140090B46C /* SignInView.swift */; };
+		7661F24F2A5064E00090B46C /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7661F24E2A5064E00090B46C /* UserProfileView.swift */; };
+		7661F2572A5086D50090B46C /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7661F2562A5086D50090B46C /* StorageService.swift */; };
+		7661F2592A508B4F0090B46C /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7661F2582A508B4F0090B46C /* LoginView.swift */; };
+		7661F25B2A55E5CE0090B46C /* UserDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7661F25A2A55E5CE0090B46C /* UserDataManager.swift */; };
 		7668647D29CB730D00C5ECD5 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7668647C29CB730D00C5ECD5 /* TitleView.swift */; };
 		76D8BD0129E3E1D1000E688B /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D8BD0029E3E1D1000E688B /* HomeViewModel.swift */; };
 		76D8BD0329E3E24F000E688B /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D8BD0229E3E24F000E688B /* UserView.swift */; };
@@ -76,6 +81,11 @@
 		764D476429E5D82000466E57 /* AddCourseCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCourseCardViewModel.swift; sourceTree = "<group>"; };
 		764D476629E5E5DE00466E57 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		764D476829E5E5F800466E57 /* CalendarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewModel.swift; sourceTree = "<group>"; };
+		7661F24A2A5063140090B46C /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		7661F24E2A5064E00090B46C /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
+		7661F2562A5086D50090B46C /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
+		7661F2582A508B4F0090B46C /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		7661F25A2A55E5CE0090B46C /* UserDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataManager.swift; sourceTree = "<group>"; };
 		7668647C29CB730D00C5ECD5 /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
 		76D8BD0029E3E1D1000E688B /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		76D8BD0229E3E24F000E688B /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
@@ -134,6 +144,7 @@
 		76118069297C412900C47B68 /* StudentsScheduler */ = {
 			isa = PBXGroup;
 			children = (
+				7661F2552A5086C70090B46C /* Storage */,
 				76118096297C426700C47B68 /* ViewModels */,
 				76118095297C426100C47B68 /* Views */,
 				76118094297C425800C47B68 /* Models */,
@@ -192,6 +203,9 @@
 				764D476229E5D81000466E57 /* AddCourseCardView.swift */,
 				764D476629E5E5DE00466E57 /* CalendarView.swift */,
 				76F619D229FFBD77003EF7E6 /* AddCourseView.swift */,
+				7661F24A2A5063140090B46C /* SignInView.swift */,
+				7661F24E2A5064E00090B46C /* UserProfileView.swift */,
+				7661F2582A508B4F0090B46C /* LoginView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -209,6 +223,15 @@
 				76F619D029FFBD5B003EF7E6 /* AddCourseViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		7661F2552A5086C70090B46C /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				7661F2562A5086D50090B46C /* StorageService.swift */,
+				7661F25A2A55E5CE0090B46C /* UserDataManager.swift */,
+			);
+			path = Storage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -343,6 +366,7 @@
 			files = (
 				7643187D297D902E00D91DC8 /* CourseAssetsModel.swift in Sources */,
 				76F619D329FFBD77003EF7E6 /* AddCourseView.swift in Sources */,
+				7661F25B2A55E5CE0090B46C /* UserDataManager.swift in Sources */,
 				76D8BD0129E3E1D1000E688B /* HomeViewModel.swift in Sources */,
 				7643187B297D8F4E00D91DC8 /* CourseModel.swift in Sources */,
 				76014A0929BDC26400631C87 /* NotificationsModel.swift in Sources */,
@@ -351,14 +375,18 @@
 				76118098297C46C000C47B68 /* UserModel.swift in Sources */,
 				7668647D29CB730D00C5ECD5 /* TitleView.swift in Sources */,
 				76F619D129FFBD5B003EF7E6 /* AddCourseViewModel.swift in Sources */,
+				7661F2592A508B4F0090B46C /* LoginView.swift in Sources */,
+				7661F2572A5086D50090B46C /* StorageService.swift in Sources */,
 				764D476529E5D82000466E57 /* AddCourseCardViewModel.swift in Sources */,
 				76D8BD0729E3E3BE000E688B /* NotificationsViewModel.swift in Sources */,
 				76D8BD0329E3E24F000E688B /* UserView.swift in Sources */,
 				76014A0F29BDE99800631C87 /* HomeView.swift in Sources */,
 				76D8BD0529E3E266000E688B /* UserViewModel.swift in Sources */,
+				7661F24B2A5063140090B46C /* SignInView.swift in Sources */,
 				764D476729E5E5DE00466E57 /* CalendarView.swift in Sources */,
 				764D476129E5D6DE00466E57 /* CourseCardViewModel.swift in Sources */,
 				764D476329E5D81000466E57 /* AddCourseCardView.swift in Sources */,
+				7661F24F2A5064E00090B46C /* UserProfileView.swift in Sources */,
 				764D475F29E5D55C00466E57 /* CourseCardView.swift in Sources */,
 				76D8BD0B29E3E3F4000E688B /* NotificationsView.swift in Sources */,
 				7611806B297C412900C47B68 /* StudentsSchedulerApp.swift in Sources */,

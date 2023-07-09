@@ -6,9 +6,12 @@
 //
 
 import SwiftUI
+import Combine
 
 struct HomeView: View {
     @ObservedObject var viewModel: HomeViewModel
+    @StateObject var userViewModel = UserViewModel()
+    @StateObject var addCourseViewModel = AddCourseViewModel()
     
     var body: some View {
         NavigationView {
@@ -18,7 +21,7 @@ struct HomeView: View {
                     
                     Spacer()
                     
-                    NavigationLink(destination: UserView(viewModel: UserViewModel())) {
+                    NavigationLink(destination: UserView(viewModel: userViewModel)) {
                         Image(systemName: "person.circle")
                             .font(.system(size: 35))
                     }
@@ -36,11 +39,15 @@ struct HomeView: View {
                     HStack(spacing: 20) {
                         ForEach(viewModel.courses, id: \.id) { course in
                             CourseCardView(course: course)
+                                .padding(.trailing, 60)
                         }
                         
-                        AddCourseCardView(viewModel: AddCourseCardViewModel())
+                        NavigationLink(destination: AddCourseView(viewModel: addCourseViewModel)) {
+                            AddCourseCardView(viewModel: addCourseViewModel)
+                        }
+                        .padding(.leading, -40)
                     }
-                    .padding(.horizontal)
+                    .padding(.leading, 50)
                 }
                 
                 Divider()
@@ -49,12 +56,14 @@ struct HomeView: View {
                     .padding(.horizontal)
                     .padding(.bottom, 10)
             }
+            .padding(.horizontal, 10)
             .onAppear {
                 viewModel.loadData()
             }
         }
         .navigationTitle("")
         .navigationBarHidden(true)
+        .environmentObject(userViewModel)
     }
 }
 

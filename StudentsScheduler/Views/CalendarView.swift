@@ -9,18 +9,28 @@ import SwiftUI
 
 struct CalendarView: View {
     @ObservedObject var viewModel: CalendarViewModel
+    @State private var selectedDate: Date?
     
     private let calendar = Calendar.current
     
     var body: some View {
-        VStack {
-            calendarHeader
+        ZStack {
+            if(viewModel.isSelected) {
+                withAnimation {
+                    TaskListView
+                }
+            }
             
-            Divider()
-            
-            calendarGrid
+            VStack {
+                calendarHeader
+                
+                Divider()
+                
+                calendarGrid
+            }
+            .opacity(viewModel.isSelected ? 0 : 1)
+            .padding(.horizontal)
         }
-        .padding(.horizontal)
     }
     
     private var calendarHeader: some View {
@@ -46,6 +56,32 @@ struct CalendarView: View {
         }
     }
     
+    private var TaskListView: some View {
+        VStack {
+            HStack {
+                Button("Go back") {
+                    withAnimation {
+                        viewModel.isSelected = false
+                    }
+                }
+                Text("Today's tasks down below: ")
+            }
+            .background(
+                RoundedRectangle(cornerRadius: 20)
+                    .foregroundColor(.mint)
+                    .opacity(0.3)
+                    .frame(width: 350, height: 100)
+            )
+            .padding(.top, 50)
+            
+            Spacer()
+            
+            Text("No tasks for today")
+            
+            Spacer()
+        }
+    }
+    
     private var calendarGrid: some View {
         LazyVGrid(columns: Array(repeating: GridItem(.flexible()), count: 7), spacing: 10) {
             ForEach(Date.daysOfWeek, id: \.self) { day in
@@ -55,10 +91,11 @@ struct CalendarView: View {
             }
             
             ForEach(viewModel.currentMonthDates, id: \.self) { date in
-                CalendarCell(date: date, isSelected: viewModel.isSelected)
+                CalendarCell(date: date, isSelected: date == selectedDate) // Pass isSelected based on date comparison
                     .onTapGesture {
+                        selectedDate = date // Update selectedDate on tap
                         viewModel.selectDate(date: date)
-                        viewModel.isSelected.toggle()
+                        
                     }
             }
         }
@@ -88,7 +125,6 @@ private struct CalendarCell: View {
                 .frame(maxWidth: .infinity, minHeight: 40)
                 .background(isSelected ? Color.blue : (calendar.isDateInToday(date) ? Color.blue.opacity(0.3) : Color.clear))
                 .clipShape(Circle())
-                
         }
     }
 }

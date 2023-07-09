@@ -12,6 +12,7 @@ import Foundation
 class AddCourseCardViewModel: ObservableObject {
     func addCourse() {
         // Implement adding a new course action here
+        
     }
 }
 

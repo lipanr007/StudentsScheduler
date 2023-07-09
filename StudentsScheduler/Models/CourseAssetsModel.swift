@@ -24,7 +24,8 @@ struct CourseAsset: Codable {
     }
 }
 
-struct Deadline: Codable {
+struct Deadline: Codable, Identifiable {
+    var id = UUID()
     var day: Date
     var time: Date
     var courseName: String

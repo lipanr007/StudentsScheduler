@@ -17,15 +17,15 @@ class SplashViewModel: ObservableObject {
         isLoading = true
         
         // Load your data in the background
-        DispatchQueue.global(qos: .background).async {
+        DispatchQueue.global(qos: .background).async { [self] in
             // Simulate loading data for 2 seconds
             sleep(2)
             
             // Once the data is loaded, set isLoading to false and navigate to the Home view
-            DispatchQueue.main.async { [self] in
-                isLoading = false
-                isNavigationActive = true
-            }
+//            DispatchQueue.main.async { [self] in
+            self.isLoading = false
+            self.isNavigationActive = true
+//            }
         }
     }
 }
